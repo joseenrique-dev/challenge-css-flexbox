@@ -51,6 +51,7 @@
    .main{
 	background: white;
     padding: 20px;
+	flex: 1 1 70%;
    }
 
    h2{
@@ -69,6 +70,7 @@
    aside{
 	background: #e67e22;
 	padding: 20px;
+	flex: 1 1 30%;
    }
 
    .widget{
@@ -79,25 +81,54 @@
    footer{
 	background: #2c3e50;
 	padding: 20px;
+	width: 100%;
+	display: flex;
+	flex-wrap:wrap;
+	justify-content:space-between;
    }
-   footer a{
-	color: white;
-    text-decoration: none;
-   }
+   
    footer section{
 	padding: 10px;
     background: #c0392b;
     display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
    }
-   .social{
-	background: #e67e22;
+   footer section a{
+	   padding: 10px;
+	    color: white;
+    	text-decoration: none;
+		flex-grow:1;
+   }
+   footer section a:hover{
+	background: #E74C3C;
    }
    
+   .social{
+	background: rgb(230, 126, 34);
+	text-align: center;
+   }
+   footer .social a {
+	color:#fff;
+	text-decoration: none;
+	padding:10px;
+	display: inline-block;
+}
 
    @media screen and (max-width: 800px){
-	   
+	.contenedor {
+		flex-direction:column;
+	}
    }
+   @media screen and (max-width: 600px) {
+	/* aside {
+		flex-direction:column;
+	} */
+
+	footer {
+		justify-content:space-around;
+	}
+}
   </style>
 </head>
 
